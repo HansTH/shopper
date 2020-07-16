@@ -1,0 +1,23 @@
+// shopping types
+export const GET_SHOPPING_LIST = 'GET_SHOPPING_LIST';
+export const CLEAR_SHOPPING_LIST = 'CLEAR_SHOPPING_LIST';
+export const NEW_SHOPPING_ITEM = 'NEW_SHOPPING_ITEM';
+export const TOOGLE_COMPLETE = 'TOOGLE_COMPLETE';
+export const DELETE_SHOPPING_ITEM = 'DELETE_SHOPPING_ITEM';
+export const EDIT_SHOPPING_ITEM = 'EDIT_SHOPPING_ITEM';
+export const IS_MODAL_OPEN = 'IS_MODAL_OPEN';
+export const CANCEL_UPDATE_ITEM = 'CANCEL_UPDATE_ITEM';
+export const UPDATE_SHOPPING_ITEM = 'UPDATE_SHOPPING_ITEM';
+export const SHOPPING_ITEM_ERROR = 'SHOPPING_ITEM_ERROR';
+// alert types
+export const SET_ALERT = 'SET_ALERT';
+export const REMOVE_ALERT = 'REMOVE_ALERT';
+// authorization types
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAILURE = 'REGISTER_FAILURE';
+export const USER_LOADED = 'USER_LOADED';
+export const AUTH_ERROR = 'AUTH_ERROR';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+export const LOGOUT = 'LOGOUT';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';

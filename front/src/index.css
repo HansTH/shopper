@@ -1,0 +1,248 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 18px;
+}
+
+.icon {
+	height: 18px;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+/* NAVBAR */
+.navbar {
+	background-color: #29bb9c;
+	padding: 16px 0;
+	text-align: center;
+}
+
+nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	max-width: 800px;
+	margin-left: auto;
+}
+
+.navbar p {
+	color: #eee;
+	text-transform: capitalize;
+}
+
+.navbar nav a {
+	color: #eee;
+	margin-left: 8px;
+}
+
+.navbar nav a:hover {
+	color: #159588;
+	cursor: pointer;
+}
+
+.navbar form {
+	display: inline-flex;
+	max-width: 800px;
+	width: 100%;
+	height: 40px;
+}
+
+.navbar input {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding: 8px;
+	font-size: 20px;
+	outline: 0;
+	background-color: #159588;
+	color: #eee;
+	font-weight: bolder;
+
+	border-radius: 6px 0px 0px 6px;
+}
+
+.navbar input::placeholder {
+	color: #ccc;
+	font-weight: normal;
+}
+
+.navbar button {
+	height: 40px;
+	width: 40px;
+	border-radius: 0 20px 20px 0;
+	border: 0;
+	font-size: 30px;
+	outline: 0;
+	border: 3px solid #159588;
+	background-image: url('./assets/img/plus.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: 32px;
+	background-color: #159588;
+}
+
+.navbar button:hover {
+	cursor: pointer;
+}
+
+/* SHOPPING LIST */
+.shopping-list {
+	padding: 16px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.horizontal-seperator {
+	width: 75%;
+	height: 2px;
+	background-color: #f0f0f0;
+	margin: 30px auto;
+}
+
+/* SHOPPING ITEM */
+.shopping-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 40px;
+	padding: 16px 4px 16px 16px;
+	margin-bottom: 16px;
+	box-shadow: 1px 2px 7px 0 rgba(0, 0, 0, 0.22);
+	border-radius: 4px;
+}
+
+.shopping-item p {
+	color: #4a4a4a;
+	font-size: 20px;
+	margin: 0;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.seperator {
+	height: 25px;
+	width: 1px;
+	background-color: #f0f0f0;
+	margin: 0 4px;
+}
+.shopping-item button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0;
+	background-color: transparent;
+	width: 40px;
+	height: 40px;
+	margin: auto;
+	padding: 0;
+}
+
+/* MODAL */
+.overlay {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(1, 1, 1, 0.4);
+	z-index: 0;
+	margin: auto;
+}
+
+.modal {
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 1px 2px 7px 0 rgba(0, 0, 0, 0.22);
+	border-radius: 4px;
+	width: 300px;
+	margin: auto;
+	background-color: #eee;
+	z-index: 100;
+}
+
+.modal-form h1 {
+	text-align: center;
+}
+
+.modal-form label {
+	float: left;
+	margin: 16px 16px 4px 0;
+	font-size: 16px;
+}
+
+.modal-form input {
+	display: block;
+	width: 268px;
+	height: 30px;
+	padding: 8px;
+	font-size: 16px;
+	border: 0;
+	border-radius: 4px;
+}
+
+.modal-form button {
+	display: block;
+	width: 100%;
+	height: 30px;
+	margin: 16px 0;
+	font-size: 16px;
+	border: 0;
+	background-color: #159588;
+	color: #fff;
+	font-weight: bolder;
+	border-radius: 4px;
+}
+
+.modal-form button:hover {
+	background-color: #179e91;
+}
+
+.alert {
+	background-color: #e23636;
+	margin-bottom: 16px;
+	border-radius: 4px;
+	box-shadow: 1px 2px 7px 0 rgba(0, 0, 0, 0.22);
+}
+
+.alert p {
+	color: #eee;
+	font-weight: bold;
+	text-align: left;
+	padding: 8px;
+	margin: 0;
+}
