@@ -15,7 +15,7 @@ function ShoppingList() {
 		isModalOpen,
 		error,
 		clearErrors,
-		loading
+		loading,
 	} = shoppingListContext;
 	const { loadUser } = useContext(authContext);
 	const { setAlert } = useContext(alertContext);
@@ -38,27 +38,35 @@ function ShoppingList() {
 		// eslint-disable-next-line
 	}, [error]);
 
+	const sortedShoppingList = Object.values(shoppingList).sort(
+		(a, b) => b.itemName < a.itemName
+	);
+
 	return (
 		<div className='shopping-list'>
 			<Alert />
-
-			{shoppingList.length === 0 ? (
+			{/* if shoppinglist is empty, show message */}
+			{sortedShoppingList.length === 0 ? (
 				<div style={{ textAlign: 'center' }}>
 					<p>No items found, add new items.</p>
 					{!loading && <Spinner />}
 				</div>
 			) : (
-				shoppingList.map(item =>
+				// show shoppinglis items, are not completed
+				sortedShoppingList.map((item) =>
 					!item.completed ? <ShoppingItem key={item._id} item={item} /> : null
 				)
 			)}
-			{shoppingList.length > 0 ? (
+			{/* if shoppinglist is empty, don't show seperator line */}
+			{sortedShoppingList.length > 0 ? (
 				<div className='horizontal-seperator'></div>
 			) : null}
-			{shoppingList.length !== 0 &&
-				shoppingList.map(item =>
+			{/* show shoppingist items, are compeleted */}
+			{sortedShoppingList.length !== 0 &&
+				sortedShoppingList.map((item) =>
 					item.completed ? <ShoppingItem key={item._id} item={item} /> : null
 				)}
+			{/* show modal window */}
 			{isModalOpen && <Edit />}
 		</div>
 	);
